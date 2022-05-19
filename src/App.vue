@@ -85,10 +85,10 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
         UK
       </p>
       <div class="w-full mx-auto flex mt-20">
-        <div class="w-1/3">
+        <div class="w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
-              class="text-xl font-bold bg-blue-300 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
             >
               1
             </div>
@@ -102,7 +102,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
           <div class="flex flex-col items-center pt-10">
             <div
-              class="text-xl font-bold bg-blue-300 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
             >
               2
             </div>
@@ -121,10 +121,10 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           alt=""
           width="350"
         />
-        <div class="w-1/3">
+        <div class="w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
-              class="font-bold text-xl bg-blue-300 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
             >
               3
             </div>
@@ -138,7 +138,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
           <div class="flex flex-col items-center pt-10">
             <div
-              class="font-bold text-xl bg-blue-300 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
             >
               4
             </div>
@@ -151,6 +151,29 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="mt-24 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white"
+    >
+      <h2 class="font-bold text-3xl">More Information</h2>
+      <p class="pt-6 text-xl">
+        Washy is a review based system. Meaning that the better job you do, the
+        better ratings you'll get and the higher priority you will get with
+        customers. Essentially, somebody wants their car washed but doesn't want
+        to travel to a car wash or leave their car and find something to do
+        whilst it gets cleaned, that is where we step in, they will simply open
+        the app and search for providers near them, they will click your profile
+        and book a time and place, specify the service they want e.g interior &
+        exterior, they will then pay for the service in advance. The customer
+        will also leave the car unlocked for you to simply turn up, do your job
+        and leave without a trace.
+      </p>
+      <h3 class="pt-6 text-2xl font-bold">
+        Sounds good?
+        <a class="underline" href="/register"
+          >Register to become a service provider today!</a
+        >
+      </h3>
     </div>
   </div>
 </template>
