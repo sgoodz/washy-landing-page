@@ -1,15 +1,17 @@
 <script setup>
+import { ref } from "vue";
 import Navbar from "./components/Navbar.vue";
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
+import Accordion from "./components/Accordion.vue";
 </script>
 
 <template>
   <kinesis-container>
-    <div class="relative text-white bg-washy-blue header">
+    <div class="relative text-white bg-washy-blue header" ref="hero-section">
       <Navbar />
       <div class="inner-header">
         <div class="max-w-8xl mx-auto pt-10 md:pt-52 px-4 flex">
-          <div class="w-4/5 md:w-1/2">
+          <div class="w-4/5 md:w-1/2 z-20">
             <h1 class="text-5xl font-bold">Become a Provider for Washy UK</h1>
             <h2 class="text-xl pt-6">
               Click the link below or download our app to register and become a
@@ -20,15 +22,18 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
             >
               Register
             </button>
-            <img src="./assets/dload-app.png" alt="" width="150" />
+            <div class="flex mt-6 gap-6">
+              <img src="./assets/dload-app-apple.png" alt="" width="150" />
+              <img src="./assets/dload-app-google.png" alt="" width="150" />
+            </div>
           </div>
 
-          <div class="absolute right-[23rem] top-[10rem]">
+          <div class="absolute hidden right-[5%] top-[10rem] z-10">
             <kinesis-element
               tag="img"
               src="./src/assets/washyPhone.png"
               :strength="30"
-              width="750"
+              width="650"
             />
           </div>
         </div>
@@ -77,18 +82,18 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
     </div>
   </kinesis-container>
   <!--Header ends-->
-  <div class="max-w-8xl px-4 my-10 mx-auto">
+  <div class="max-w-8xl px-4 my-10 mb-16 mx-auto">
     <div>
       <h1 class="text-center text-4xl font-bold">How Washy Works</h1>
       <p class="text-center text-xl pt-4">
         Follow our simple guide below to become a certified provider for Washy
         UK
       </p>
-      <div class="w-full mx-auto flex mt-20">
-        <div class="w-1/3 p-4">
+      <div class="w-full mx-auto flex flex-col md:flex-row mt-10 md:mt-20">
+        <div class="w-full md:w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
-              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
             >
               1
             </div>
@@ -102,7 +107,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
           <div class="flex flex-col items-center pt-10">
             <div
-              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
             >
               2
             </div>
@@ -116,15 +121,15 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
         </div>
         <img
-          class="mx-auto px-6"
+          class="mx-auto px-6 py-10 md:py-0"
           src="./assets/flatPhone.png"
           alt=""
           width="350"
         />
-        <div class="w-1/3 p-4">
+        <div class="w-full md:w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
-              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
             >
               3
             </div>
@@ -138,7 +143,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           </div>
           <div class="flex flex-col items-center pt-10">
             <div
-              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-400"
+              class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
             >
               4
             </div>
@@ -153,7 +158,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
       </div>
     </div>
     <div
-      class="mt-24 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white"
+      class="mt-10 md:mt-24 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white"
     >
       <h2 class="font-bold text-3xl">More Information</h2>
       <p class="pt-6 text-xl">
@@ -174,8 +179,120 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
           >Register to become a service provider today!</a
         >
       </h3>
+      <div class="mt-6 flex flex-col md:flex-row gap-6">
+        <img src="./assets/dload-app-apple.png" alt="" width="150" />
+        <img src="./assets/dload-app-google.png" alt="" width="150" />
+      </div>
     </div>
   </div>
+  <div class="w-full bg-gray-100">
+    <div class="max-w-8xl mx-auto flex md:flex-row flex-col">
+      <div class="p-12 w-full md:w-2/3">
+        <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+        <Accordion class="mb-4 pt-6 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl">How do I get paid?</span>
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              You will connect your bank details to your profile and once you
+              have completed your job and taken pictures, the money will be
+              released into your account instantly.
+            </p>
+          </template>
+        </Accordion>
+
+        <Accordion class="mb-4 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl text-left"
+              >Customer didn't leave car unlocked</span
+            >
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              If the customer doesn't leave their car unlocked then you will
+              have to go on the app and give them a quick call. They might have
+              left the keys in a hidden place.
+            </p>
+          </template>
+        </Accordion>
+
+        <Accordion class="mb-4 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl text-left"
+              >The car is in a difficult place to clean</span
+            >
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              You can give the customer a call and ask them to move their car or
+              you can carry on with the job and do your best to clean. If it is
+              unsafe then you can cancell the service and you will be paid a
+              cancellation fee once we have notified the customer.
+            </p>
+          </template>
+        </Accordion>
+
+        <Accordion class="mb-4 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl text-left"
+              >Do I have to have a registered company to work for you?</span
+            >
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              No! That is why Washy is a disruptive business, anyone who can
+              clean a car can work for us. It is review based so the better job
+              you do, the more customers will choose you.
+            </p>
+          </template>
+        </Accordion>
+        <Accordion class="mb-4 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl text-left"
+              >I damaged the customers car, what do I do?</span
+            >
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              If you damage a customers car, you will be liable to cover cost of
+              repairs. When you sign up for us you accept the terms and
+              conditions which state that you will pay for damages occured
+              whilst cleaning.
+            </p>
+          </template>
+        </Accordion>
+        <Accordion class="mb-4 border-b border-gray-500">
+          <template v-slot:title>
+            <span class="font-semibold text-xl text-left"
+              >Can I use my own washing equipment?</span
+            >
+          </template>
+          <template v-slot:content>
+            <p class="text-xl pb-6">
+              Yes you can. If you prefer to use your own equipment then go
+              ahead. We can also suppy you some equipment at a small cost if you
+              don't have your own.
+            </p>
+          </template>
+        </Accordion>
+      </div>
+      <div class="">
+        <img src="./assets/faq-phone1.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="max-w-8xl mx-auto mt-16"></div>
+  <div
+    class="cursor-pointer hover:text-white fixed bottom-4 right-4 py-3 px-4 border-2 border-blue-800 text-xl font-bold bg-white text-blue-800 hover:bg-blue-800 transition-colors duration-300"
+  >
+    ↑
+  </div>
+  <footer class="w-full border-t-2">
+    <div class="max-w-8xl mx-auto text-center text-black py-4">
+      &copy; Copyright 2022, Washy
+    </div>
+  </footer>
 </template>
 
 <style scoped></style>

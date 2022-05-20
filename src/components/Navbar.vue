@@ -1,11 +1,22 @@
-<script setup></script>
+<script>
+export default {
+  methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+
+      window.scrollTo(0, top);
+    },
+  },
+};
+</script>
 
 <template>
   <header
-    class="w-full sticky top-0 backdrop-blur transition-colors duration-500 z-10"
+    class="w-full sticky top-0 backdrop-blur transition-colors duration-500 z-30"
   >
     <nav class="max-w-8xl mx-auto p-4 flex items-center justify-between">
-      <h3 class="text-xl font-bold">Washy</h3>
+      <h3 class="text-xl font-bold" @click="goto('hero-section')">Washy</h3>
 
       <ul class="flex items-center text-l gap-5">
         <li class="hidden md:inline-block">More Info</li>
