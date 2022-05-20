@@ -7,7 +7,7 @@ import Accordion from "./components/Accordion.vue";
 
 <template>
   <kinesis-container>
-    <div class="relative text-white bg-washy-blue header" ref="hero-section">
+    <div class="relative text-white bg-washy-blue header" id="sec-hero">
       <Navbar />
       <div class="inner-header">
         <div class="max-w-8xl mx-auto pt-10 md:pt-52 px-4 flex">
@@ -28,12 +28,12 @@ import Accordion from "./components/Accordion.vue";
             </div>
           </div>
 
-          <div class="absolute hidden right-[5%] top-[10rem] z-10">
+          <div class="absolute right-[5%] top-[10rem] z-10">
             <kinesis-element
+              class="w-1/2 md:w-[70%]"
               tag="img"
               src="./src/assets/washyPhone.png"
               :strength="30"
-              width="650"
             />
           </div>
         </div>
@@ -83,7 +83,7 @@ import Accordion from "./components/Accordion.vue";
   </kinesis-container>
   <!--Header ends-->
   <div class="max-w-8xl px-4 my-10 mb-16 mx-auto">
-    <div>
+    <div id="sec-1">
       <h1 class="text-center text-4xl font-bold">How Washy Works</h1>
       <p class="text-center text-xl pt-4">
         Follow our simple guide below to become a certified provider for Washy
@@ -185,7 +185,7 @@ import Accordion from "./components/Accordion.vue";
       </div>
     </div>
   </div>
-  <div class="w-full bg-gray-100">
+  <div class="w-full bg-gray-100" id="sec-2">
     <div class="max-w-8xl mx-auto flex md:flex-row flex-col">
       <div class="p-12 w-full md:w-2/3">
         <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
@@ -282,12 +282,14 @@ import Accordion from "./components/Accordion.vue";
       </div>
     </div>
   </div>
-  <div class="max-w-8xl mx-auto mt-16"></div>
-  <div
-    class="cursor-pointer hover:text-white fixed bottom-4 right-4 py-3 px-4 border-2 border-blue-800 text-xl font-bold bg-white text-blue-800 hover:bg-blue-800 transition-colors duration-300"
-  >
-    ↑
-  </div>
+  <div class="max-w-8xl mx-auto mt-16">Contact Us Section</div>
+  <a href="#sec-hero" v-smooth-scroll="{ duration: 1000 }">
+    <div
+      class="cursor-pointer hover:text-white fixed bottom-4 right-4 py-3 px-4 border-2 border-blue-800 text-xl font-bold bg-white text-blue-800 hover:bg-blue-800 transition-colors duration-300"
+    >
+      ↑
+    </div>
+  </a>
   <footer class="w-full border-t-2">
     <div class="max-w-8xl mx-auto text-center text-black py-4">
       &copy; Copyright 2022, Washy
