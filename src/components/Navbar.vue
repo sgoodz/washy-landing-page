@@ -5,9 +5,9 @@
     class="w-full sticky top-0 backdrop-blur transition-colors duration-500 z-30"
   >
     <nav class="max-w-8xl mx-auto p-4 flex items-center justify-between">
-      <a href="#sec-hero" v-smooth-scroll="{ duration: 1000, offset: -50 }">
+      <router-link to="/">
         <h3 class="text-xl font-bold">Washy</h3>
-      </a>
+      </router-link>
 
       <ul class="flex items-center text-l gap-5">
         <a
