@@ -30,9 +30,9 @@ import Accordion from "./components/Accordion.vue";
 
           <div class="absolute right-[5%] top-[10rem] z-10">
             <kinesis-element
-              class="w-1/2 md:w-[70%]"
+              class="w-1/2 md:w-[70%] hidden md:inline-block"
               tag="img"
-              src="./src/assets/washyPhone.png"
+              src="./assets/washyPhone.png"
               :strength="30"
             />
           </div>
@@ -282,7 +282,6 @@ import Accordion from "./components/Accordion.vue";
       </div>
     </div>
   </div>
-  <div class="max-w-8xl mx-auto mt-16">Contact Us Section</div>
   <a href="#sec-hero" v-smooth-scroll="{ duration: 1000 }">
     <div
       class="cursor-pointer hover:text-white fixed bottom-4 right-4 py-3 px-4 border-2 border-blue-800 text-xl font-bold bg-white text-blue-800 hover:bg-blue-800 transition-colors duration-300"
