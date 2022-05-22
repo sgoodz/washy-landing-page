@@ -11,7 +11,7 @@ import Accordion from "./components/Accordion.vue";
       <Navbar />
       <div class="inner-header">
         <div class="max-w-8xl mx-auto pt-10 md:pt-52 px-4 flex">
-          <div class="w-4/5 md:w-1/2 z-20">
+          <div class="w-full lg:w-1/2 md:w-2/3 z-20">
             <h1 class="text-5xl font-bold">Become a Provider for Washy UK</h1>
             <h2 class="text-xl pt-6">
               Click the link below or download our app to register and become a
@@ -28,11 +28,13 @@ import Accordion from "./components/Accordion.vue";
             </div>
           </div>
 
-          <div class="absolute right-[5%] top-[10rem] z-10">
+          <div
+            class="absolute right-[5%] lg:right-[5%] md:-right-[40%] top-[10rem] md:top-[14rem ] z-10"
+          >
             <kinesis-element
               class="w-1/2 md:w-[70%] hidden md:inline-block"
               tag="img"
-              src="./assets/washyPhone.png"
+              src="./src/assets/washyPhone.png"
               :strength="30"
             />
           </div>
@@ -77,7 +79,13 @@ import Accordion from "./components/Accordion.vue";
             <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
           </g>
         </svg>
+
+        <img
+          src="./assets/tesla1.png"
+          class="absolute lg:w-[18%] lg:top-[82%] w-[30%] top-[90%] md:top-[80%]"
+        />
       </div>
+
       <!--Waves end-->
     </div>
   </kinesis-container>
@@ -89,8 +97,8 @@ import Accordion from "./components/Accordion.vue";
         Follow our simple guide below to become a certified provider for Washy
         UK
       </p>
-      <div class="w-full mx-auto flex flex-col md:flex-row mt-10 md:mt-20">
-        <div class="w-full md:w-1/3 p-4">
+      <div class="w-full mx-auto flex flex-col lg:flex-row mt-10 lg:mt-20">
+        <div class="w-full lg:w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
               class="text-xl font-bold bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
@@ -121,12 +129,12 @@ import Accordion from "./components/Accordion.vue";
           </div>
         </div>
         <img
-          class="mx-auto px-6 py-10 md:py-0"
+          class="mx-auto px-6 py-10 lg:py-0"
           src="./assets/flatPhone.png"
           alt=""
           width="350"
         />
-        <div class="w-full md:w-1/3 p-4">
+        <div class="w-full lg:w-1/3 p-4">
           <div class="flex flex-col items-center">
             <div
               class="font-bold text-xl bg-white border-2 border-blue-900 rounded py-6 px-8 block cursor-pointer hover:bg-blue-900 transition-colors duration-300 hover:text-white"
@@ -158,7 +166,7 @@ import Accordion from "./components/Accordion.vue";
       </div>
     </div>
     <div
-      class="mt-10 md:mt-24 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white"
+      class="mt-10 lg:mt-24 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white shadow-md"
     >
       <h2 class="font-bold text-3xl">More Information</h2>
       <p class="pt-6 text-xl">
@@ -185,9 +193,9 @@ import Accordion from "./components/Accordion.vue";
       </div>
     </div>
   </div>
-  <div class="w-full bg-gray-100" id="sec-2">
-    <div class="max-w-8xl mx-auto flex md:flex-row flex-col">
-      <div class="p-12 w-full md:w-2/3">
+  <div class="w-full bg-gray-100 mb-16" id="sec-2">
+    <div class="max-w-8xl mx-auto flex lg :flex-row flex-col">
+      <div class="p-12 w-full lg:w-2/3">
         <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
         <Accordion class="mb-4 pt-6 border-b border-gray-500">
           <template v-slot:title>
@@ -278,7 +286,32 @@ import Accordion from "./components/Accordion.vue";
         </Accordion>
       </div>
       <div class="">
-        <img src="./assets/faq-phone1.png" alt="" />
+        <img src="./assets/faq-phone1.png" alt="" class="md:mx-auto" />
+      </div>
+    </div>
+  </div>
+  <div class="max-w-8xl mx-auto mb-16 px-4" id="sec-3">
+    <div
+      class="mt-10 md:mt-0 p-12 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl text-white shadow-md"
+    >
+      <h2 class="font-bold text-3xl">Contact Us</h2>
+      <p class="pt-6 text-xl">
+        Have any questions or unsure about anything? Give us a call or email and
+        we will provide you all the information you need.
+      </p>
+      <div>
+        <div>
+          <font-awesome-icon icon="phone" class="pt-6 text-2xl" />
+          <a href="tel:07597994711">
+            <span class="text-xl font-bold pl-2">+447597994711</span>
+          </a>
+        </div>
+        <div>
+          <font-awesome-icon icon="envelope" class="pt-6 text-2xl" />
+          <a href="mailto:info@washy.uk">
+            <span class="text-xl font-bold pl-2">info@washy.uk</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

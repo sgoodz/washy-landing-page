@@ -10,13 +10,25 @@
       </a>
 
       <ul class="flex items-center text-l gap-5">
-        <a href="#sec-1" v-smooth-scroll="{ duration: 1000, offset: -50 }">
+        <a
+          href="#sec-1"
+          v-smooth-scroll="{ duration: 1000, offset: -50 }"
+          class="hover:font-bold focus:font-bold"
+        >
           <li class="hidden md:inline-block">More Info</li>
         </a>
-        <a href="#sec-2" v-smooth-scroll="{ duration: 1000 }">
+        <a
+          href="#sec-2"
+          v-smooth-scroll="{ duration: 1000 }"
+          class="hover:font-bold focus:font-bold"
+        >
           <li class="hidden md:inline-block">FAQ</li>
         </a>
-        <a href="#sec-1" v-smooth-scroll="{ duration: 1000, offset: -50 }">
+        <a
+          href="#sec-3"
+          v-smooth-scroll="{ duration: 1000, offset: -50 }"
+          class="hover:font-bold focus:font-bold"
+        >
           <li class="hidden md:inline-block">Contact Us</li>
         </a>
         <button
