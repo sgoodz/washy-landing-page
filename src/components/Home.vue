@@ -3,6 +3,7 @@ import { ref } from "vue";
 import Navbar from "./Navbar.vue";
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
 import Accordion from "./Accordion.vue";
+import Contactform from "./Contactform.vue";
 </script>
 
 <template>
@@ -314,6 +315,7 @@ import Accordion from "./Accordion.vue";
             <span class="text-xl font-bold pl-2">info@washy.uk</span>
           </a>
         </div>
+        <Contactform />
       </div>
     </div>
   </div>

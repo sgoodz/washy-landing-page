@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gradient-to-r from-sky-400 to-blue-500 relative">
-    <div class="absolute top-1/2 right-1/2 z-50">
+    <div class="absolute top-1/2 w-full flex items-center justify-center z-50">
       <Multistep />
     </div>
     <canvas></canvas>
@@ -286,7 +286,7 @@ onMounted(() => {
 canvas {
   display: block;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   z-index: 10;
 }
