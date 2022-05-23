@@ -1,7 +1,8 @@
 <template>
   <div class="min-h-screen bg-gradient-to-r from-sky-400 to-blue-500 relative">
-    <Navbar />
-    <div class="absolute top-1/2 left-1/2">FORM</div>
+    <div class="absolute top-1/2 right-1/2 z-50">
+      <Multistep />
+    </div>
     <canvas></canvas>
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script setup>
 import { onMounted } from "vue";
 import Navbar from "./Navbar.vue";
+import Multistep from "./Multistep.vue";
 
 onMounted(() => {
   // ---------
