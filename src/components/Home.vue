@@ -37,7 +37,7 @@ import Contactform from "./Contactform.vue";
             <kinesis-element
               class="w-1/2 md:w-[70%] hidden md:inline-block"
               tag="img"
-              src="./src/assets/washyPhone.png"
+              src="./src/assets/washyPhone1.png"
               :strength="30"
             />
           </div>
@@ -82,11 +82,6 @@ import Contactform from "./Contactform.vue";
             <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
           </g>
         </svg>
-
-        <img
-          src="./assets/tesla1.png"
-          class="absolute lg:w-[18%] lg:top-[82%] w-[30%] top-[90%] md:top-[80%]"
-        />
       </div>
 
       <!--Waves end-->

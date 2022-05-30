@@ -14,7 +14,7 @@ const submitHandler = async () => {
     type="form"
     v-model="formData"
     :form-class="submitted ? 'hide' : 'show'"
-    submit-label="Register"
+    submit-label="Submit"
     @submit="submitHandler"
   >
     <FormKit
@@ -33,9 +33,19 @@ const submitHandler = async () => {
       help="What email should we use?"
       validation="required|email"
     />
+    <FormKit
+      type="number"
+      name="phone"
+      label="Your Number"
+      placeholder="07567..."
+      help="Your phone number"
+      validation="required"
+    />
   </FormKit>
   <div v-if="submitted">
     <h2>Submission successful!</h2>
   </div>
   <pre wrap>{{ formData }}</pre>
 </template>
+
+<style></style>
